@@ -1,0 +1,34 @@
+Project pricing proposal. Source: Customer Analysis.txt (excerpt)
+
+Starter trial
+$0
+For evaluation, not unrestricted commercial usage
+30 video minutes, once.
+Basic segment analysis.
+Limited retention.
+No team collaboration.
+
+
+Recommended entry tier
+Professional
+$49
+/month
+
+₹4,410/month at illustrative exchange rate
+300 video minutes/month.
+Segment-level emotion and sentiment.
+Transcript and timestamps.
+Dashboard and export.
+One user.
+
+
+Growth tier
+Business
+$199
+/month
+
+₹17,910/month
+2,000 video minutes/month , Team accounts, Bulk analysis , Advanced analytics Export and API access , Longer retention.
+
+Enterprise
+Custom : Custom usage volume , API integrations,Access control and audit logs , Dedicated support,  Custom retention and deployment arrangements.
