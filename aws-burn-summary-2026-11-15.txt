@@ -1,0 +1,11 @@
+User-supplied AWS assistant summary, received 16 November 2026.
+Reporting context: 1-15 November 2026 UTC.
+October 2026: USD 24.92. November MTD: USD 116.77.
+June-September 2026: zero spend, according to supplied summary.
+Daily peak: USD 44.02 on 14 November.
+Days elapsed used by the supplied burn model: 15. November has 30 days.
+Daily average = 116.77/15. Linear monthly scenario = daily average * 30.
+Annual run-rate scenario = daily average * 365.
+The exact daily values other than the stated peak were not supplied.
+The separate console screenshot displays USD 116.78, USD 258.31 AWS forecast and USD 58.29 remaining credits.
+Neither projected run rate is an invoice or a measured future bill.
