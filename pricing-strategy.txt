@@ -1,0 +1,201 @@
+**Nuance API – Complete AWS Cost Analysis, Pricing Strategy & Profitability**
+
+I've reviewed our AWS expenditure and current GPU processing estimates. Based on the available data, here's how we can structure the API business, decide our selling price and offer free usage without creating unnecessary losses.
+
+### 1. Current AWS Infrastructure & Processing Cost
+
+Our current GPU instance cost is approximately ₹172.50/hour.
+
+Based on the assumption that GPU processing time is equal to video duration:
+
+- Cost per GPU second: ₹0.0479
+- Cost per 1-minute video: ₹2.875
+- Cost per 2-minute video: ₹5.75
+- Cost per 5-minute video: ₹14.37
+
+If we add an estimated 40% operational overhead for retries, failed requests, storage, moderation and other operational expenses, our estimated loaded cost becomes approximately ₹4.03 per video minute.
+
+Important: This is a working estimate, not our verified all-in cost. We still need actual inference telemetry and attributable AWS billing data.
+
+### 2. Recommended API Selling Price & Margins
+
+We can position Nuance as a B2B AI video and audio intelligence API.
+
+Our recommended pricing:
+
+- PAYG: ₹12/minute
+- Professional: ₹10/minute
+- Enterprise/high-volume: ₹8/minute
+
+Estimated margins at ₹4.025 loaded cost:
+
+| Selling price | Cost | Gross margin |
+|---|---:|---:|
+| ₹8/min | ₹4.025 | 49.7% |
+| ₹10/min | ₹4.025 | 59.8% |
+| ₹12/min | ₹4.025 | 66.5% |
+| ₹15/min | ₹4.025 | 73.2% |
+| ₹20/min | ₹4.025 | 79.9% |
+
+These are estimated processing gross margins, before fixed infrastructure, taxes, payment fees, salaries, support and customer acquisition.
+
+My recommendation is to start at ₹12/minute and offer volume discounts only to customers committing to larger usage.
+
+### 3. Monthly Subscription Plans
+
+We can introduce three subscription tiers:
+
+**Starter – ₹2,999/month**
+- 300 video minutes
+- Effective rate: ₹10/minute
+- Estimated processing cost: ₹1,207.50
+- Gross contribution: ₹1,791.50
+- Processing gross margin: 59.7%
+
+**Professional – ₹13,499/month**
+- 1,500 video minutes
+- Effective rate: ₹9/minute
+- Estimated processing cost: ₹6,037.50
+- Gross contribution: ₹7,461.50
+- Processing gross margin: 55.3%
+
+**Business – ₹47,999/month**
+- 6,000 video minutes
+- Effective rate: approximately ₹8/minute
+- Estimated processing cost: ₹24,150
+- Gross contribution: ₹23,849
+- Processing gross margin: 49.7%
+
+Unused minutes should expire monthly, and additional usage should be billed separately. We should avoid unlimited plans.
+
+### 4. Free API Credits – Customer Acquisition Strategy
+
+We can provide free credits to attract developers and businesses, allowing them to integrate and test our API before purchasing.
+
+Estimated free usage cost:
+
+- 5 minutes = ₹20
+- 10 minutes = ₹40
+- 15 minutes = ₹60
+- 30 minutes = ₹121
+- 50 minutes = ₹201
+- 100 minutes = ₹403
+
+My recommendation:
+
+- Regular registrations: 10 free minutes.
+- Qualified business leads: 30 free minutes.
+- Enterprise prospects: 100 free minutes after evaluation.
+
+We can initially allocate ₹2,000/month as our free-credit budget.
+
+This gives us approximately 496 free video minutes every month.
+
+For example:
+- 50 users receiving 10 minutes each cost approximately ₹2,012.
+- 100 users receiving 10 minutes each cost approximately ₹4,025.
+- 100 users receiving 30 minutes each cost approximately ₹12,075.
+
+Free credits should be restricted to verified accounts, with rate limits and one-time trial eligibility.
+
+Free usage is a marketing expense, not revenue. Its purpose is to convert users into paying customers.
+
+### 5. Individual AI Model Cost Structure
+
+Our current Nuance architecture contains five major components:
+
+1. Whisper – Speech-to-text transcription.
+2. BERT – Text processing and classification.
+3. Video Encoder – Extracts visual information.
+4. Audio Encoder – Extracts audio features.
+5. Fusion Layer – Combines information from different modalities.
+
+AWS currently bills the shared SageMaker endpoint rather than providing a separate bill for each model.
+
+However, we can calculate the internal cost allocation using telemetry.py, which records execution timings for individual stages.
+
+Formula:
+
+Model GPU cost = GPU execution seconds × ₹0.0479.
+
+Once we have actual telemetry, we can introduce separate API endpoints and pricing for individual models.
+
+This also gives us the opportunity to sell transcription-only, audio-only, video-only and complete multimodal analysis separately, provided the architecture supports independent execution.
+
+### 6. AWS Infrastructure & Scaling
+
+Our latest AWS console snapshot shows:
+
+- November MTD expenditure: approximately ₹11,000.
+- AWS month-end forecast: approximately ₹24,330.
+- Average daily gross expenditure in the earlier audit: ₹733.38.
+- SageMaker accounts for approximately 99.7% of the displayed service spending.
+
+A continuously running GPU endpoint at ₹172.50/hour would cost approximately ₹1,25,925/month over 730 hours.
+
+This is why we should not keep the GPU running 24/7 unnecessarily.
+
+We should prioritize:
+- On-demand inference or scale-to-zero where supported.
+- Autoscaling based on incoming requests.
+- Monitoring idle GPU time.
+- Batching requests where appropriate.
+- Tracking GPU utilization and inference duration.
+- Optimizing model execution and memory consumption.
+
+The theoretical always-on cost allocated per video is approximately:
+- 19 videos/day: ₹218/video.
+- 100 videos/day: ₹41.40/video.
+- 1,000 videos/day: ₹4.14/video.
+
+This demonstrates why infrastructure utilization is extremely important.
+
+However, the 400–500 daily-minute break-even estimate needs validation against actual request volume, provisioned capacity, and on-demand infrastructure costs. It is not a guaranteed universal threshold.
+
+### 7. Revenue & Processing Contribution Examples
+
+Assuming we charge ₹10/minute and our loaded processing cost remains ₹4.025/minute:
+
+- 1,000 processed minutes generate ₹10,000 revenue and approximately ₹5,975 processing contribution.
+- 5,000 processed minutes generate ₹50,000 revenue and approximately ₹29,875 processing contribution.
+- 10,000 processed minutes generate ₹1,00,000 revenue and approximately ₹59,750 processing contribution.
+- 50,000 processed minutes generate ₹5,00,000 revenue and approximately ₹2,98,750 processing contribution.
+
+These figures are before fixed infrastructure, salaries, marketing, taxes and other operating expenses. They are not net profit projections.
+
+### 8. Important Business & Technical Decisions
+
+Before launching commercially, we should:
+
+- Measure actual GPU execution time instead of assuming it equals video duration.
+- Calculate individual model costs through telemetry.
+- Track successful requests, failed requests and retries.
+- Implement API key management and per-account usage tracking.
+- Introduce monthly credit limits and overage billing.
+- Prevent free-credit abuse through account verification.
+- Set maximum video duration, request size and concurrency limits.
+- Introduce dedicated infrastructure pricing for enterprise customers.
+- Track actual AWS cost per successful processed video minute.
+
+We should also account for applicable privacy and AI regulatory requirements, especially when selling emotion-related analysis for workplace or educational use.
+
+### 9. Final Recommendation
+
+I suggest we launch with the following strategy:
+
+| Offering | Recommended price |
+|---|---:|
+| PAYG API | ₹12/min |
+| Starter | ₹2,999/month |
+| Professional | ₹13,499/month |
+| Business | ₹47,999/month |
+| Enterprise | Custom |
+| Free trial | 10–30 minutes |
+
+Our target should be approximately 50–65% processing gross margin initially.
+
+We should prioritize getting developers and SaaS companies to integrate our API, offer limited free credits, and convert them into monthly subscriptions.
+
+**The main objective should not just be selling API requests. It should be building recurring revenue while keeping GPU utilization high and infrastructure costs controlled.**
+
+Once we have actual telemetry data, we can revise the per-model pricing and calculate our true net profitability.

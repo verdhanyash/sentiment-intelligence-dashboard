@@ -1,34 +1,10 @@
-Project pricing proposal. Source: Customer Analysis.txt (excerpt)
-
-Starter trial
-$0
-For evaluation, not unrestricted commercial usage
-30 video minutes, once.
-Basic segment analysis.
-Limited retention.
-No team collaboration.
-
-
-Recommended entry tier
-Professional
-$49
-/month
-
-₹4,410/month at illustrative exchange rate
-300 video minutes/month.
-Segment-level emotion and sentiment.
-Transcript and timestamps.
-Dashboard and export.
-One user.
-
-
-Growth tier
-Business
-$199
-/month
-
-₹17,910/month
-2,000 video minutes/month , Team accounts, Bulk analysis , Advanced analytics Export and API access , Longer retention.
-
-Enterprise
-Custom : Custom usage volume , API integrations,Access control and audit logs , Dedicated support,  Custom retention and deployment arrangements.
+Argus monthly subscription proposal — supplied 17 November 2026
+Starter: INR 2,999/month, 300 video minutes.
+Professional: INR 13,499/month, 1,500 video minutes.
+Business: INR 47,999/month, 6,000 video minutes.
+Unused included minutes expire monthly; additional usage is billed separately. No overage tariff was supplied.
+The trial is separate from the paid Starter plan: 10 standard minutes; 30 qualified-business-lead minutes; 100 enterprise minutes after evaluation.
+API PAYG INR 12/video minute; Professional API INR 10/video minute; Enterprise committed-volume API INR 8/video minute.
+Professional API price is different from the effective Professional subscription rate (~INR 9/min at full allowance).
+Loaded processing-cost assumption: INR 2.875 GPU/min x 1.40 = INR 4.025/video minute, before fixed/other costs.
+These are user proposals and scenario assumptions, not published tariffs, actual sales or verified all-in costs.
